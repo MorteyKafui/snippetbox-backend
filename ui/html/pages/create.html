@@ -1,9 +1,9 @@
 {{define "title"}} Create a New Snippet {{end}} {{define "main"}}
 <form action="/snippet/create" method="POST">
   <div>
-    <label for="title">Title:</label>
+    <label>Title:</label>
     {{with .Form.FieldErrors.title}}
-    <label for="" class="error">{{.}}</label>
+    <label class="error">{{.}}</label>
     {{end}}
     <input type="text" name="title" value="{{.Form.Title}}" />
   </div>
